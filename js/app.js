@@ -212,7 +212,7 @@ $(document).ready(function() {
         if (params && params.match(/^Q\d+$/)) {
             var restriction = "?item wdt:P31 wd:"+params+".";
         } else {
-            var restriction = "";
+            var restriction = "?item wdt:P31 ?prop . FILTER(?prop NOT IN (wd:Q921099, wd:Q7379880))";
         }
 
         const query = `
